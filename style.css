@@ -1,0 +1,1872 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  background-color: lightgray;
+  font-family: 'Times New Roman';
+
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.featureBox {
+  display: none;
+}
+
+.header {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background-color: #1E1533;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 2vw;
+}
+
+.logo {
+
+  height: 20vh;
+  width: 14vw;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  gap: 4vw;
+}
+
+#active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul.links {
+  list-style: none;
+  padding: 0;
+}
+
+ul.links li {
+  position: relative;
+}
+
+ul.links a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.fa-solid {
+  padding: 0 1vw;
+}
+
+ul.links .dropdown {
+  list-style: none;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  background-color: #1E1533;
+  padding: 0;
+
+}
+
+ul.links .dropdown li {
+  padding: 5px 10px;
+}
+
+ul.links li:hover .dropdown {
+  display: block;
+}
+
+
+.icons {
+  padding: 0 4vw;
+  display: flex;
+  gap: 1vw;
+
+}
+
+.icons a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#menu {
+  display: none;
+}
+
+/*header end*/
+
+.heroSection {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.heroSection img {
+  width: 100%;
+  flex-shrink: 0;
+  background-color: #433878;
+  animation-name: slider;
+  animation-duration: 18s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+
+  /* Start: Image 1 in view */
+  20% {
+    transform: translateX(0);
+  }
+
+  /* hold img 1*/
+  25% {
+    transform: translateX(-100%);
+  }
+
+  /*move to img 2 */
+  45% {
+    transform: translateX(-100%);
+  }
+
+  /* hold img 2 */
+  50% {
+    transform: translateX(-200%);
+  }
+
+  /*move to img 3*/
+  70% {
+    transform: translateX(-200%);
+  }
+
+  /*moving left(-sign)*/
+  75% {
+    transform: translateX(-300%);
+  }
+
+  95% {
+    transform: translateX(-300%);
+  }
+
+  100% {
+    transform: translateX(-400%);
+  }
+
+  120% {
+    transform: translateX(-400%);
+  }
+
+  125% {
+    transform: translateX(0);
+  }
+
+  /*return to img 1 */
+}
+
+/*hero section end*/
+.search-box {
+  background-color: #1E1533;
+  position: absolute;
+  right: 0px;
+  display: flex;
+  border: 2px solid #1E1533;
+
+}
+
+.search-box input {
+  padding: 1vw;
+  outline: none;
+  border: none;
+
+}
+
+.search-box input::placeholder {
+  color: #13033a;
+}
+
+
+.search-box i {
+  color: #fff;
+  padding: 1vw;
+}
+
+/*searchbox end*/
+.featuredContainer {
+  height: 60%;
+  width: 100%;
+  background-color: #433878;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  overflow: hidden;
+}
+
+.images {
+  overflow: auto;
+  height: 100%;
+  width: 100vw;
+  background-color: #433878;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vw;
+  border-left: 2px solid #1E1533;
+  border-right: 2px solid #1E1533;
+}
+
+.featuredContainer #left,
+#right {
+  color: antiquewhite;
+  font-size: 3vw;
+  padding: 0.5vw;
+  margin: 1.5vw;
+}
+
+.images .contentBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+}
+
+.images img {
+  width: 10vw;
+  height: 20vh;
+}
+
+.images p {
+  color: white;
+  font-size: 2vw;
+  background-color: #1E1533;
+}
+
+.hats1 {
+  background-image: url("images/hats.1.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.hats2 {
+  background-image: url("images/hats.2.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.hats3 {
+  background-image: url("images/hats.3.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.hats4 {
+  background-image: url("images/hats.4.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.handbags1 {
+  background-image: url("images/handbags.1.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.handbags2 {
+  background-image: url("images/handbags.2.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.handbags3 {
+  background-image: url("images/handbags.3.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.handbags4 {
+  background-image: url("images/handbags.4.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.scarves1 {
+  background-image: url("images/scarves.1.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.scarves2 {
+  background-image: url("images/scarves.2.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.scarves3 {
+  background-image: url("images/scarves.3.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.scarves4 {
+  background-image: url("images/scarves.4.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.tshirts1 {
+  background-image: url("images/tshirts.1.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.tshirts2 {
+  background-image: url("images/tshirts.2.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.tshirts3 {
+  background-image: url("images/tshirts.3.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+.tshirts4 {
+  background-image: url("images/tshirts.4.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 20%;
+  flex-shrink: 0;
+  border: 2px solid #1E1533;
+}
+
+#heading {
+  padding: 0.5;
+  background-color: #433878;
+  font-size: 4vw;
+  color: white;
+  text-align: center;
+
+}
+
+/*featured section end*/
+/*footer section start*/
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1E1533;
+  color: #fff;
+}
+
+.footer>div {
+  /*flex: 1 1 200px;  flex-grow: 1 ,flex-shrink,flex-basis*/
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer p {
+  text-decoration: underline;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.quickLinks,
+.shop-now,
+.catagories {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quickLinks a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.quickLinks li,
+.shop-now li,
+.categories li {
+  margin: 5px 0;
+}
+
+.signup-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.signup-form input {
+  background-color: #1E1533;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  max-width: 250px;
+  width: 100%;
+  color: #fff;
+}
+
+.signup-form button {
+  padding: 10px;
+  background-color: #fff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  max-width: 120px;
+  width: 100%;
+  color: #1E1533;
+}
+
+.signup-form button:hover {
+  background-color: #ccc;
+}
+
+.form-icons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.form-icons a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.form-icons a:hover {
+  color: #ccc;
+}
+
+.fotterBottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2a2a2e;
+  color: #fff;
+  width: 100%;
+}
+
+/*footer end*/
+/*Products*/
+
+.main {
+  overflow: hidden;
+}
+
+.mainsection {
+  height: 40vh;
+  width: 100%;
+  background-image: url("images/hero\ bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.mainsection h1 {
+  font-weight: 900;
+
+}
+
+.mainsection p {
+  font-size: 1rem;
+}
+
+/*hats-section*/
+#hats-section {
+  background-color: #1E1533;
+  position: relative;
+  width: 100%;
+
+}
+
+#hats-section .products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#hats-section .product1 {
+  margin: 2vw;
+  background-color: #433878;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2vw;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#hats-section .product1 img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+}
+
+#hats-section .products-container .product1:hover {
+  transform: scale(1.1);
+  transition: transform linear 0.2s;
+}
+
+#hats-section .product1 .product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  padding: 2vw 0;
+}
+
+h1 {
+  font-family: 'Rowdies';
+  text-align: center;
+  text-decoration: underline;
+  color: #fff;
+
+}
+
+#hats-section .product1 .product-details p,
+span {
+  color: #fff;
+  font-size: 2vw;
+}
+
+#hats-section .product-details #cart-btn,
+#buy-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 50px;
+  background-color: #13033a;
+  color: #fff;
+}
+
+#hats-section .product-details #buy-btn {
+  background-color: orange;
+  transition: background-color 0.3s ease-in-out;
+
+
+}
+
+#hats-section .product-details #buy-btn:hover {
+  background-color: #13033a;
+
+}
+
+/*tshirts section*/
+#tshirts-section {
+  position: relative;
+  width: 100%;
+  background-color: #13033a;
+}
+
+
+#tshirts-section .products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#tshirts-section .product1 {
+  margin: 2vw;
+  background-color: #433878;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2vw;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#tshirts-section .product1 img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+}
+
+#tshirts-section .products-container .product1:hover {
+  transform: scale(1.1);
+  transition: transform linear 0.3s;
+}
+
+#tshirts-section .product1 .product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  padding: 2vw 0;
+}
+
+#tshirts-section h1 {
+  font-family: 'Rowdies';
+  text-align: center;
+
+  color: #fff;
+
+}
+
+#tshirts-section .product-details p,
+span {
+  color: #fff;
+  font-size: 2vw;
+}
+
+#tshirts-section .product-details #cart-btn,
+#buy-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 50px;
+  background-color: #13033a;
+  color: #fff;
+}
+
+#tshirts-section .product-details #buy-btn {
+  background-color: orange;
+  transition: background-color 0.3s ease-in-out;
+
+
+}
+
+#tshirts-section .product-details #buy-btn:hover {
+  background-color: #13033a;
+
+}
+
+/*tshirts section end*/
+
+/*scarves section start*/
+#scarves-section {
+  position: relative;
+  width: 100%;
+  background-color: #1E1533;
+}
+
+#scarves-section .products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#scarves-section .product1 {
+  margin: 2vw;
+  background-color: #433878;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2vw;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#scarves-section .product1 img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+}
+
+#scarves-section .products-container .product1:hover {
+  transform: scale(1.1);
+  transition: transform linear 0.3s;
+}
+
+#scarves-section .product1 .product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  padding: 2vw 0;
+}
+
+#scarves-section h1 {
+  font-family: 'Rowdies';
+  text-align: center;
+  color: #fff;
+
+}
+
+#scarves-section .product-details p,
+span {
+  color: #fff;
+  font-size: 2vw;
+}
+
+#scarves-section .product-details #cart-btn,
+#buy-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 50px;
+  background-color: #13033a;
+  color: #fff;
+}
+
+#scarves-section .product-details #buy-btn {
+  background-color: orange;
+  transition: background-color 0.3s ease-in-out;
+
+
+}
+
+#scarves-section .product-details #buy-btn:hover {
+  background-color: #13033a;
+
+}
+
+/*scarves section end*/
+/*handbags section start*/
+
+#handbags-section {
+  position: relative;
+  width: 100%;
+  background-color: #13033a;
+}
+
+#handbags-section .products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#handbags-section .product1 {
+  margin: 2vw;
+  background-color: #433878;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2vw;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#handbags-section .product1 img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+}
+
+#handbags-section .products-container .product1:hover {
+  transform: scale(1.1);
+  transition: transform linear 0.3s;
+}
+
+#handbags-section .product1 .product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  padding: 2vw 0;
+}
+
+#handbags-section h1 {
+  font-family: 'Rowdies';
+  text-align: center;
+  color: #fff;
+
+}
+
+#handbags-section .product-details p,
+span {
+  color: #fff;
+  font-size: 2vw;
+}
+
+#handbags-section .product-details #cart-btn,
+#buy-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 50px;
+  background-color: #13033a;
+  color: #fff;
+}
+
+#handbags-section .product-details #buy-btn {
+  background-color: orange;
+  transition: background-color 0.3s ease-in-out;
+
+
+}
+
+#handbags-section .product-details #buy-btn:hover {
+  background-color: #13033a;
+}
+
+/*handbags section end*/
+/*about us start*/
+.aboutus {
+  display: flex;
+}
+
+.aboutus .paragraphs {
+  background-color: #433878;
+  color: #fff;
+  width: 50%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2vw;
+  padding: 2vw 3vw;
+}
+
+.aboutus img {
+
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*Blogs Page*/
+.blog-cont {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #433878;
+
+}
+
+.container {
+  display: flex;
+  gap: 3vw;
+  padding: 2vw;
+
+}
+
+.blog-post {
+
+  border: 2px solid #fff;
+  width: 50%;
+  box-shadow: 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.blog-post p {
+  padding: 1vw;
+  font-weight: 600;
+  color: #fff;
+}
+
+.blog-post img {
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-para {
+  display: none;
+  font-size: inherit;
+}
+
+.read-btn {
+  padding: 0.6vw;
+  margin: 1vw;
+  background-color: #2a2a2e;
+  color: #fff;
+  border: none;
+  box-shadow: 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/*about us end*/
+/* contact us */
+.contactus-cont {
+
+  width: 100%;
+  height: 100%;
+}
+
+.contactus-top {
+  background-image: url("images/bggg.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+
+}
+
+.contact-form {
+  background-color: #13033a;
+  height: 70%;
+  width: 40%;
+  margin-left: 30px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#namebox,
+#Emailbox,
+#msgbox {
+  background-color: transparent;
+  height: 8vh;
+  width: 20vw;
+  margin-top: 20px;
+  border: 2px solid #f2f1f5;
+  outline: none;
+  padding: 5px;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#msgbox {
+  resize: none;
+  height: 15vh;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+#submit-btn {
+  padding: 1vw 3vw;
+  margin-top: 25px;
+  margin-left: 60px;
+  background-color: #2a2a2e;
+  color: #fff;
+  border: none;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+
+}
+
+.contactus-cont {
+  overflow: hidden;
+}
+
+.contactus-cont .contactus-bottom {
+  width: 100%;
+  background-color: #F5F5F5;
+  height: 3vh;
+  display: flex;
+  padding-top: 25px;
+  padding-left: 10px;
+  align-items: center;
+  color: #13033a;
+  font-size: 2vw;
+  font-weight: 800;
+}
+
+.social-icons {
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.social-icons a {
+  color: #13033a;
+}
+
+#cart-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*hat cart start*/
+.hat-container {
+  background-image: url("https://wallpapers.com/images/hd/plain-black-with-wooden-pattern-09v7n22juf06luep.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  flex-wrap: wrap;
+  font-size: 2vw;
+}
+
+.hat-container img {
+  object-fit: cover;
+  object-position: center;
+  height: 35vh !important;
+  border-radius: 10px;
+  border: dotted 2px #fff;
+  /* box-shadow: 4px 6px rgba(240, 235, 235, 0.1); */
+}
+
+.hat-container .hat-dets {
+  background-color: #13033a;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 2vw;
+}
+
+.quantity-div {
+  display: flex;
+  gap: 2vw;
+}
+
+.quantity-div #quantity {
+  background-color: transparent;
+  border: solid 2px #ccc;
+  color: #fff;
+  padding: 1vw;
+  display: flex;
+  margin-top: 10px;
+}
+
+input[type="radio"] {
+  accent-color: #3498db;
+}
+
+.hat-dets h2 {
+  font-size: 4vw;
+}
+
+.size-div select {
+  background-color: transparent;
+  border: solid 2px #ccc;
+  color: #fff;
+  padding: 1vw;
+  width: 80%;
+}
+
+.size-div option {
+  color: #2a2a2e;
+}
+
+#addto-cart {
+  background-color: #3498db;
+  border: none;
+  padding: 1.3vw;
+  width: 75%;
+  color: #fff;
+  font-weight: 900;
+}
+
+.hat-dets a {
+  font-size: 1.5vw !important;
+  color: #3498db;
+}
+
+/*hats cart end*/
+/*tshirts cart start*/
+.tshirt-container {
+  background-image: url("https://wallpapers.com/images/hd/plain-black-with-wooden-pattern-09v7n22juf06luep.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  flex-wrap: wrap;
+  font-size: 2vw;
+}
+
+.tshirt-container img {
+  object-fit: cover;
+  object-position: center;
+  height: 35vh !important;
+  border-radius: 10px;
+  border: dotted 2px #fff;
+}
+
+.tshirt-container .tshirt-dets {
+  background-color: #13033a;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 2vw;
+}
+
+.tshirt-dets a {
+  font-size: 1.5vw !important;
+  color: #3498db;
+}
+
+/*tshirts cart end*/
+/*scarves cart start*/
+.scarf-container {
+  background-image: url("https://wallpapers.com/images/hd/plain-black-with-wooden-pattern-09v7n22juf06luep.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  flex-wrap: wrap;
+  font-size: 2vw;
+}
+
+.scarf-container img {
+  object-fit: cover;
+  object-position: center;
+  height: 35vh !important;
+  border-radius: 10px;
+  border: dotted 2px #fff;
+}
+
+.scarf-container .scarf-dets {
+  background-color: #13033a;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 2vw;
+}
+
+.scarf-dets a {
+  font-size: 1.5vw !important;
+  color: #3498db;
+}
+
+/*scarves cart end*/
+/*handbag cart start*/
+.handbag-container {
+  background-image: url("https://wallpapers.com/images/hd/plain-black-with-wooden-pattern-09v7n22juf06luep.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  flex-wrap: wrap;
+  font-size: 2vw;
+}
+
+.handbag-container img {
+  object-fit: cover;
+  object-position: center;
+  height: 35vh !important;
+  border-radius: 10px;
+  border: dotted 2px #fff;
+}
+
+.handbag-container .handbag-dets {
+  background-color: #13033a;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 2vw;
+}
+
+.handbag-dets a {
+  font-size: 1.5vw !important;
+  color: #3498db;
+}
+
+/*scarves cart end*
+/*media queries*/
+@media (max-width:1130px) {
+
+  .featuredContainer {
+    display: none;
+  }
+
+  .parentfeature {
+    background-color: #433878;
+
+  }
+
+  .featureBox {
+    display: block;
+    margin: 0 2vw;
+
+  }
+
+  .featureBox img {
+    height: 20vh;
+    width: 20vw;
+  }
+
+  .featureBox p {
+    padding-left: 1vw;
+    padding-top: 1vw;
+    font-size: larger;
+    height: 6vh;
+    width: 100%;
+    color: #fff;
+    background-color: #1E1533;
+  }
+
+  .hats-box {
+    display: flex;
+    gap: 2vw;
+  }
+
+  .hats-box .hatscard1 {
+    background-image: url("images/hats.1.jpg");
+    background-size: cover;
+    height: 50vw;
+    width: 50%;
+    border: 2px #1E1533 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hats-box .hatscard2 {
+    background-image: url("images/hats.2.jpg");
+    background-size: cover;
+    height: 50vw;
+    width: 50%;
+    border: 2px #1E1533 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .handbags-box {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+  }
+
+  .handbags-box .handbagscard1 {
+    background-image: url("images/handbags.1.jpg");
+    background-size: cover;
+    height: 50vw;
+    width: 50%;
+    border: 2px #1E1533 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .handbags-box .handbagscard2 {
+    background-image: url("images/handbags.2.jpg");
+    background-size: cover;
+    height: 50vw;
+    width: 50%;
+    border: 2px #1E1533 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .scarves-box {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+  }
+
+  .scarves-box .scarvescard1 {
+    background-image: url("images/scarves.1.jpg");
+    background-size: cover;
+    height: 50vw;
+    width: 50%;
+    border: 2px #1E1533 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .scarves-box .scarvescard2 {
+    background-image: url("images/scarves.2.jpg");
+    background-size: cover;
+    height: 50vw;
+    width: 50%;
+    border: 2px #1E1533 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tshirts-box {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+
+  }
+
+  .tshirts-box .thsirtscard1 {
+    background-image: url("images/tshirts.1.jpg");
+    background-size: cover;
+    height: 50vw;
+    width: 50%;
+    border: 2px #1E1533 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+  }
+
+  .tshirts-box .thsirtscard2 {
+    background-image: url("images/tshirts.2.jpg");
+    background-size: cover;
+    height: 50vw;
+    width: 50%;
+    border: 2px #1E1533 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+  }
+
+  .hat-dets a {
+    font-size: 2vw;
+  }
+
+  .tshirt-dets a {
+    font-size: 2vw;
+  }
+
+  .scarf-dets a {
+    font-size: 2vw;
+  }
+
+  .handbag-dets a {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width:958px) {
+  .contactus-cont {
+    height: 70% !important;
+
+  }
+
+  .contactus-top .contact-form {
+
+    height: 85%;
+    width: 50%;
+    margin: 0 12px;
+  }
+
+  .contact-form #namebox,
+  .contact-form #Emailbox,
+  .contact-form #msgbox {
+    width: 30vw;
+  }
+
+  .contactus-bottom {
+    font-size: 2.5vw !important;
+  }
+}
+
+@media (max-width:600px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    color: #fff;
+    background-color: #433878;
+    height: calc(85vh - 100px);
+    width: 100%;
+    font-size: 2.5em;
+    padding-top: 3vh;
+    z-index: 10;
+    visibility: hidden;
+
+  }
+
+
+  .links>li {
+    margin-top: 8px;
+    margin-left: 6px;
+  }
+
+  .links>li>a:hover {
+    width: 26vw;
+    background-color: #1E1533;
+    color: #fff;
+    border-radius: 8px;
+  }
+
+  .dropdown {
+    margin-left: 110px;
+    padding: 10px;
+    width: 7em;
+    z-index: 11;
+
+  }
+
+  .links>li:hover .dropdown {
+    display: block;
+  }
+
+  .fa-solid {
+    padding: 0 0.5vw;
+  }
+
+  .logo {
+    width: 30vw;
+    height: 18vh;
+  }
+
+  .icons {
+    font-size: 5vw;
+    display: flex;
+    gap: 3vw;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  .heroSection {
+    height: 40vh;
+  }
+
+  #heading {
+    font-size: 7vw;
+  }
+
+  .featuredContainer {
+    display: none;
+  }
+
+  #hats-section .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #hats-section .product1 {
+    width: 50%;
+  }
+
+  #hats-section .product1 .product-details p,
+  span {
+    color: #fff;
+    font-size: 3vw;
+  }
+
+  #tshirts-section .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #tshirts-section .product1 {
+    width: 50%;
+  }
+
+  #tshirts-section .product1 .product-details p,
+  span {
+    color: #fff;
+    font-size: 3vw;
+  }
+
+  #scarves-section .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #scarves-section .product1 {
+    width: 50%;
+  }
+
+  #scarves-section .product1 .product-details p,
+  span {
+    color: #fff;
+    font-size: 3vw;
+  }
+
+  #handbags-section .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #handbags-section .product1 {
+    width: 50%;
+  }
+
+  #handbags-section .product1 .product-details p,
+  span {
+    color: #fff;
+    font-size: 3vw;
+  }
+
+  .aboutus .paragraphs {
+    font-size: 2vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 200%;
+  }
+
+  #active {
+    text-decoration: none;
+  }
+
+  .links .fa-solid {
+    display: none;
+  }
+
+  .blog-cont {
+    overflow: hidden;
+  }
+
+  .container {
+    margin: -5px;
+  }
+
+  .read-btn {
+    box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2vw;
+  }
+
+  .blog-post {
+
+    margin: 2vw 0;
+  }
+
+  .contactus-cont .contactus-top {
+    background-image: none;
+    width: 100%;
+    background-color: #F5F5F5;
+  }
+
+  .contactus-top .contact-form {
+    border-radius: 0px;
+    height: 60vh;
+    width: 100%;
+    margin: 20px;
+    background-image: url("images/contact\ bg.png");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.9);
+
+  }
+
+  .contact-form #namebox,
+  .contact-form #Emailbox,
+  .contact-form #msgbox {
+    width: 50vw;
+
+  }
+
+  .contact-form #submit-btn {
+    padding: 2vw 5vw;
+    margin-top: 5px;
+  }
+
+  #contact-heading {
+    color: #1E1533;
+  }
+
+  .contactus-cont .contactus-bottom {
+
+    font-size: 3.5vw !important;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .contactus-bottom .social-icons {
+    font-size: 5vw;
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+  }
+
+  /* hat-cart */
+  body>.hat-container {
+    height: 100vh;
+    width: 100%;
+    font-size: larger;
+    overflow: hidden;
+    padding: 0 3vw;
+    position: relative;
+  }
+
+  .hat-container .hat-dets {
+
+    height: 60%;
+    width: 100%;
+  }
+
+  .hat-container .image-container img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .hat-dets>a {
+    font-size: 4vw !important;
+  }
+
+  /* tshirt cart */
+  body>.tshirt-container {
+    height: 100vh;
+    width: 100%;
+    font-size: larger;
+    overflow: hidden;
+    padding: 0 3vw;
+    position: relative;
+  }
+
+  .tshirt-container .tshirt-dets {
+
+    height: 60%;
+    width: 100%;
+  }
+
+  .tshirt-container .image-container img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .tshirt-dets>a {
+    font-size: 4vw !important;
+  }
+
+  /* scarf cart */
+  body>.scarf-container {
+    height: 100vh;
+    width: 100%;
+    font-size: larger;
+    overflow: hidden;
+    padding: 0 3vw;
+    position: relative;
+  }
+
+  .scarf-container .scarf-dets {
+
+    height: 60%;
+    width: 100%;
+  }
+
+  .scarf-container .image-container img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .scarf-dets>a {
+    font-size: 4vw !important;
+  }
+
+  /* handbag cart */
+  body>.handbag-container {
+    height: 100vh;
+    width: 100%;
+    font-size: larger;
+    overflow: hidden;
+    padding: 0 3vw;
+    position: relative;
+  }
+
+  .handbag-container .handbag-dets {
+
+    height: 60%;
+    width: 100%;
+  }
+
+  .handbag-container .image-container img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .handbag-dets>a {
+    font-size: 4vw !important;
+  }
+}
+
+@media (max-width: 300px) {
+
+  .signup-form input,
+  .signup-form button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .hat-dets a {
+    font-size: 5vw !important;
+  }
+
+  .tshirt-dets a {
+    font-size: 5vw;
+  }
+
+  .scarf-dets a {
+    font-size: 5vw;
+  }
+
+  .handbag-dets a {
+    font-size: 5vw;
+  }
+}
+
+/* cart */
+/* .cart-section{
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+} */
+.cart-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#cartContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#cartContent h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#cartContent p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+#cartContent img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#cartContent .delete-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #e63946;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#cartContent .delete-btn:hover {
+  background-color: #d62839;
+}
+
+#cart-para {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  padding: 20px 0;
+}

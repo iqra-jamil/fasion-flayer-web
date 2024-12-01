@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhggbOtI_16yhmn_D-2mhSW9K-DY1vTMjndg&s" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>scarf 2/ Product</title>
+</head>
+<body>
+    <div class="scarf-container">
+         <div class="image-container">
+            <img src="https://media.istockphoto.com/id/1334937436/photo/young-muslim-woman-praying.jpg?s=612x612&w=0&k=20&c=6FShgLkDZtrIgJJ2f1DPDho-xJptrN_YvZ85cyK96ag=">
+        </div>
+        
+        <div class="scarf-dets">
+            <h2>Scarf</h2>
+            <div class="price">20.00$</div>
+            
+            <div class="quantity-div">
+                <form action="">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+                </form>
+            </div>
+            
+            <div class="color-div">
+                <label for="red">
+                    <input type="radio" value="white" name="color" id="red" checked> white
+                </label>
+                <label for="blue">
+                    <input type="radio" value="Black" name="color" id="blue"> black
+                </label>
+                <label for="black">
+                    <input type="radio" value="pink" name="color" id="black"> pink
+                </label>
+            </div>
+            
+            <div class="size-div">
+                <p>Size</p>
+                <select id="size" name="size">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+            
+            <button id="addto-cart">Add to Cart</button>
+            <a href="products.html">Continue browsing</a>
+            <a href="cart1.html">view cart</a>
+        </div>
+    </div>
+    <script src="scarf.js"></script>
+</body>
+</html>

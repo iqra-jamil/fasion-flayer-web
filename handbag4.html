@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhggbOtI_16yhmn_D-2mhSW9K-DY1vTMjndg&s" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>handbag 4/ Product</title>
+</head>
+<body>
+    <div class="handbag-container">
+         <div class="image-container">
+            <img src="https://media.istockphoto.com/id/600417246/photo/elegant-outfit-close-up-black-leather-bag-handbag-in-hands.jpg?s=612x612&w=0&k=20&c=o7zcvvf1hLcXEPySMiuG3Q6npMqkkixKx-dlvzFSUNY=">
+        </div>
+        
+        <div class="handbag-dets">
+            <h2>handbag</h2>
+            <div class="price">25.00$</div>
+            
+            <div class="quantity-div">
+                <form action="">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+                </form>
+            </div>
+            
+            <div class="color-div">
+                <label for="red">
+                    <input type="radio" value="Red" name="color" id="red" checked> Red
+                </label>
+                <label for="blue">
+                    <input type="radio" value="Black" name="color" id="blue"> Black
+                </label>
+                <label for="black">
+                    <input type="radio" value="pink" name="color" id="black"> pink
+                </label>
+            </div>
+            
+            <div class="size-div">
+                <p>Size</p>
+                <select id="size" name="size">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+            
+            <button id="addto-cart">Add to Cart</button>
+            <a href="products.html">Continue browsing</a>
+            <a href="cart1.html">view cart</a>
+        </div>
+    </div>
+    <script src="handbag.js"></script>
+</body>
+</html>
